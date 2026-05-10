@@ -1,0 +1,61 @@
+/* ArkenBot docs — Discord-inspired theme */
+
+:root {
+  --ifm-color-primary: #5865f2;
+  --ifm-color-primary-dark: #4752c4;
+  --ifm-color-primary-darker: #3c45a5;
+  --ifm-color-primary-darkest: #2d3387;
+  --ifm-color-primary-light: #7289da;
+  --ifm-color-primary-lighter: #8ea1e1;
+  --ifm-color-primary-lightest: #aab8e8;
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(88, 101, 242, 0.15);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #7289da;
+  --ifm-color-primary-dark: #5865f2;
+  --ifm-color-primary-darker: #4752c4;
+  --ifm-color-primary-darkest: #3c45a5;
+  --ifm-color-primary-light: #8ea1e1;
+  --ifm-color-primary-lighter: #aab8e8;
+  --ifm-color-primary-lightest: #c5cfee;
+  --ifm-background-color: #1e1f22;
+  --ifm-background-surface-color: #2b2d31;
+  --ifm-navbar-background-color: #1e1f22;
+  --ifm-footer-background-color: #111214;
+  --docusaurus-highlighted-code-line-bg: rgba(114, 137, 218, 0.15);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: 1px solid #3f4147;
+}
+
+[data-theme='dark'] .menu {
+  background-color: #2b2d31;
+}
+
+[data-theme='dark'] article table th {
+  background-color: #1e1f22;
+}
+
+[data-theme='dark'] article table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Tighten up table styling */
+article table {
+  display: table;
+  width: 100%;
+}
+
+article table th,
+article table td {
+  padding: 0.5rem 0.75rem;
+}
+
+/* Code blocks */
+[data-theme='dark'] code {
+  background-color: #2b2d31;
+  border-color: #3f4147;
+}
