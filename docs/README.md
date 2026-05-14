@@ -21,7 +21,7 @@ ArkenBot is a fully-featured Discord bot built for community management, moderat
 | **Music** | YouTube & Spotify playback, queues, loop modes, volume |
 | **Community** | Polls, suggestions, giveaways, birthdays, rep system, counting, reaction roles |
 | **Starboard** | Highlight popular messages with configurable star threshold |
-| **Stream Alerts** | Notifications for Twitch, YouTube, Kick, Twitter, Reddit, RSS |
+| **Stream Alerts** | Notifications for Twitch, Kick, Twitter, Reddit, RSS |
 | **Invite Tracker** | Track who invited who, leaderboard, bonus invites |
 | **Custom Commands** | Text/embed responses with template variables |
 | **Embeds** | Visual embed builder with image support |

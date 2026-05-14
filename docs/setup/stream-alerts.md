@@ -1,6 +1,6 @@
 # Stream Alerts
 
-Post automatic notifications in Discord when a creator goes live, uploads a video, posts a tweet, a subreddit gets a new post, or an RSS feed updates.
+Post automatic notifications in Discord when a creator goes live, posts a tweet, a subreddit gets a new post, or an RSS feed updates.
 
 ## Setup
 
@@ -11,13 +11,12 @@ Go to **Stream Alerts** in the sidebar.
 | Platform | What Triggers an Alert |
 |---|---|
 | **Twitch** | Stream goes live |
-| **YouTube** | New video or live stream |
 | **Kick** | Stream goes live |
 | **X (Twitter)** | New tweet |
 | **Reddit** | New post in a subreddit |
 | **RSS / Podcast** | New item in a feed |
 
-> **Note:** Twitch and YouTube require API credentials configured on the server. Kick, Reddit, and RSS work without credentials. X (Twitter) requires a Bearer Token. Contact your bot administrator if alerts are not firing.
+> **Note:** Twitch requires API credentials configured on the server. Kick, Reddit, and RSS work without credentials. X (Twitter) requires a Bearer Token. Contact your bot administrator if alerts are not firing.
 
 ## Creating an Alert
 
@@ -35,7 +34,6 @@ Each platform supports template variables in the custom message field:
 | Platform | Available Variables |
 |---|---|
 | Twitch | `{streamer}`, `{title}`, `{url}`, `{game}` |
-| YouTube | `{streamer}`, `{title}`, `{url}` |
 | Kick | `{streamer}`, `{title}`, `{url}` |
 | X (Twitter) | `{streamer}`, `{title}`, `{url}` |
 | Reddit | `{streamer}`, `{title}`, `{url}`, `{author}` |
@@ -57,7 +55,6 @@ Each platform supports template variables in the custom message field:
 | Platform | What to Enter |
 |---|---|
 | Twitch | Channel username (e.g. `shroud`) |
-| YouTube | Channel handle (e.g. `@MrBeast`) |
 | Kick | Channel username (e.g. `shroud`) |
 | X (Twitter) | Username with @ (e.g. `@shroud`) |
 | Reddit | Subreddit name without r/ (e.g. `gaming`) |
