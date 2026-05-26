@@ -66,6 +66,7 @@ const sidebars: SidebarsConfig = {
         'addons/palworld-manager',
         'addons/rsm-manager',
         'addons/code-review',
+        'addons/sdk',
       ],
     },
     {

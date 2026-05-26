@@ -21,6 +21,7 @@ Go to **Addon Manager** in the sidebar to see all available addons and their sta
 | [Rust Manager](rust-manager.md) | Manage a Rust server via WebSocket RCON |
 | [ARK Manager](ark-manager.md) | Manage an ARK: Survival Evolved server via RCON |
 | [Palworld Manager](palworld-manager.md) | Manage a Palworld server via REST API |
+| [RSM Manager](rsm-manager.md) | Manage game servers via Ronin Server Manager with live status monitoring |
 | [Code Review](code-review.md) | AI-powered code analysis and formatting |
 
 ## How Addons Work
