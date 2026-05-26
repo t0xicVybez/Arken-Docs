@@ -63,6 +63,36 @@ Set a personal reminder. The bot will DM you when the time is up.
 
 ---
 
+## /autoresponse
+
+Manage regex-triggered auto-responses for the server. Messages matching a pattern will receive an automatic reply.
+
+**Required permission:** Manage Server
+
+### Subcommands
+
+| Subcommand | Description |
+|---|---|
+| `add` | Create a new auto-response rule |
+| `remove` | Delete a rule by ID |
+| `toggle` | Enable or disable a rule without deleting it |
+| `list` | List all rules in this server |
+
+#### /autoresponse add
+
+| Option | Required | Description |
+|---|---|---|
+| `pattern` | Yes | Regex pattern to match against message content (no delimiters) |
+| `response` | Yes | Text to reply with when the pattern matches |
+| `flags` | No | Regex flags (default: `i` for case-insensitive) |
+| `embed` | No | Send the response as an embed (default: false) |
+| `embed_color` | No | Hex color for the embed (e.g. `#5865F2`) |
+| `delete_message` | No | Delete the triggering message (default: false) |
+
+See [Auto-Responses Setup](../setup/auto-responses) for the full guide including pattern examples.
+
+---
+
 ## /giveaway
 
 Manage giveaways. See [Giveaways Setup](../setup/giveaways.md) for full details.

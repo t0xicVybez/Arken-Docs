@@ -119,19 +119,71 @@ Bulk delete messages from a channel (up to 100 at a time).
 
 ## /case
 
-Look up a specific moderation case by number.
+Manage moderation cases.
 
 **Required permission:** Manage Messages
+
+### Subcommands
+
+| Subcommand | Description |
+|---|---|
+| `view` | Look up a specific case by number |
+| `bulk-close` | Close all open cases for a user at once |
+
+#### /case view
 
 | Option | Required | Description |
 |---|---|---|
 | `number` | Yes | The case number to look up |
+
+#### /case bulk-close
+
+Closes every active case for a user in one action — useful when unbanning someone.
+
+| Option | Required | Description |
+|---|---|---|
+| `user` | Yes | The user whose cases to close |
+| `reason` | No | Reason recorded against the bulk closure |
+
+---
+
+## /temprole
+
+Assign a Discord role to a member for a fixed duration. The role is automatically removed when the time expires.
+
+**Required permission:** Manage Roles
+
+### Subcommands
+
+| Subcommand | Description |
+|---|---|
+| `add` | Assign a temporary role |
+| `remove` | Remove a temporary role early |
+| `list` | List all active temporary roles in the server |
+
+#### /temprole add
+
+| Option | Required | Description |
+|---|---|---|
+| `user` | Yes | The member to assign the role to |
+| `role` | Yes | The role to assign |
+| `duration` | Yes | How long to keep the role (e.g. `30m`, `2h`, `7d`) |
+| `reason` | No | Reason for the assignment |
+
+#### /temprole remove
+
+| Option | Required | Description |
+|---|---|---|
+| `user` | Yes | The member to remove the role from |
+| `role` | Yes | The role to remove |
 
 ---
 
 ## /suggestion
 
 Update the status of a member-submitted suggestion. Staff only.
+
+**Required permission:** Manage Guild
 
 ### Subcommands
 
