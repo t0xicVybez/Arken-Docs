@@ -112,3 +112,45 @@ Manage giveaways. See [Giveaways Setup](../setup/giveaways.md) for full details.
 Show a quick summary of the bot's current status, uptime, and resource usage.
 
 No options.
+
+---
+
+## /selfrole
+
+Manage the list of self-assignable roles for your server.
+
+**Required permission:** Manage Roles
+
+### Subcommands
+
+| Subcommand | Description |
+|---|---|
+| `add role:<role> [name:<name>]` | Add a role to the self-assignable list. If no name is given, the role's name is used (lowercased). |
+| `remove name:<name>` | Remove a role from the list. Supports autocomplete. |
+| `list` | Show all self-assignable roles in an embed. |
+
+See [Self-Assignable Roles Setup](../setup/self-roles) for the full guide.
+
+---
+
+## /selfassignrole
+
+Assign yourself one of the server's self-assignable roles.
+
+| Option | Required | Description |
+|---|---|---|
+| `name` | Yes | The short name of the role to assign (autocomplete shows available roles) |
+
+Autocomplete only shows roles you don't already have.
+
+---
+
+## /selfremoverole
+
+Remove a self-assignable role from yourself.
+
+| Option | Required | Description |
+|---|---|---|
+| `name` | Yes | The short name of the role to remove (autocomplete shows your current roles) |
+
+Autocomplete only shows self-assignable roles you currently have.
