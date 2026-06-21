@@ -34,6 +34,7 @@ const sidebars: SidebarsConfig = {
         'setup/music',
         'setup/counting',
         'setup/scheduled-messages',
+        'setup/temp-voice',
         'setup/slowmode',
         'setup/stats-channels',
         'setup/embeds',
@@ -58,6 +59,7 @@ const sidebars: SidebarsConfig = {
       label: 'Addons',
       items: [
         'addons/overview',
+        'addons/applications',
         'addons/tickets',
         'addons/gameservers',
         'addons/rsm-manager',

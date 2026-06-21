@@ -101,3 +101,28 @@ Go to **Leveling** in the dashboard and toggle **XP Decay** on.
 Use `/leaderboard` to view the server XP rankings. Pages show 10 members each with medals (🥇🥈🥉) for the top 3.
 
 The dashboard **Leaderboard** page shows the same data with search functionality.
+
+### Leaderboard Time Filters
+
+The dashboard Leaderboard page has three tabs:
+- **All Time** — Full server rankings by total XP
+- **Weekly** — Members active in the last 7 days, ranked by XP
+- **Monthly** — Members active in the last 30 days, ranked by XP
+
+### Reset Inactive Members
+
+Click **Reset Inactive (90+ days)** on the Leaderboard dashboard page to zero out XP, level, message count, and streak for any member whose last activity was more than 90 days ago. A confirmation prompt appears before anything is changed.
+
+### XP Role Multipliers
+
+Assign per-role XP bonuses from the **Leveling** dashboard page under **XP Role Multipliers**.
+
+1. Select a role from the dropdown
+2. Enter a multiplier (e.g. `2` for double XP, `1.5` for 50% bonus)
+3. Click **Add**
+
+When a member qualifies for multiple role multipliers, the **highest** one applies. This is then multiplied on top of the server-wide XP multiplier.
+
+**Example:** Server multiplier is `1.5×`. A member has the Booster role (2×). Their effective multiplier is `1.5 × 2 = 3×`.
+
+To remove a multiplier, click the trash icon next to the rule.
