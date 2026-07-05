@@ -49,6 +49,5 @@
 - [Overview](addons/overview.md)
 - [Ticket System](addons/tickets.md)
 - [Game Server Status](addons/gameservers.md)
-- [RSM Manager](addons/rsm-manager.md)
 - [Code Review](addons/code-review.md)
 - [Application System](addons/applications.md)
