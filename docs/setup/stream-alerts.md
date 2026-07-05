@@ -12,11 +12,12 @@ Go to **Stream Alerts** in the sidebar.
 |---|---|
 | **Twitch** | Stream goes live |
 | **Kick** | Stream goes live |
+| **YouTube** | Live stream starts |
 | **X (Twitter)** | New tweet |
 | **Reddit** | New post in a subreddit |
 | **RSS / Podcast** | New item in a feed |
 
-> **Note:** Twitch requires API credentials configured on the server. Kick, Reddit, and RSS work without credentials. X (Twitter) requires a Bearer Token. Contact your bot administrator if alerts are not firing.
+> **Note:** Twitch requires API credentials configured on the server, YouTube requires a YouTube Data API key, X (Twitter) requires a Bearer Token, and Reddit requires Reddit app credentials (see [Reddit Feeds](reddit-feeds.md)). Kick and RSS work without any credentials. Contact your bot administrator if alerts are not firing.
 
 ## Creating an Alert
 
@@ -35,6 +36,7 @@ Each platform supports template variables in the custom message field:
 |---|---|
 | Twitch | `{streamer}`, `{title}`, `{url}`, `{game}` |
 | Kick | `{streamer}`, `{title}`, `{url}` |
+| YouTube | `{streamer}`, `{title}`, `{url}` — `{game}` is not supported |
 | X (Twitter) | `{streamer}`, `{title}`, `{url}` |
 | Reddit | `{streamer}`, `{title}`, `{url}`, `{author}` |
 | RSS / Podcast | `{streamer}`, `{title}`, `{url}` |
@@ -56,6 +58,7 @@ Each platform supports template variables in the custom message field:
 |---|---|
 | Twitch | Channel username (e.g. `shroud`) |
 | Kick | Channel username (e.g. `shroud`) |
+| YouTube | Handle or channel URL (e.g. `@mkbhd` or `https://youtube.com/@mkbhd`) |
 | X (Twitter) | Username with @ (e.g. `@shroud`) |
 | Reddit | Subreddit name without r/ (e.g. `gaming`) |
 | RSS / Podcast | Full feed URL (e.g. `https://example.com/feed.xml`) |

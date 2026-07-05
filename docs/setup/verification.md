@@ -25,6 +25,8 @@ The Verification Gate requires new members to click a verify button before they 
 
 > The bot needs **Manage Roles** permission, and its role must be above both the Pending Role and Member Role in the role hierarchy.
 
+> The bot also needs **View Channel**, **Send Messages**, and **Embed Links** in the Verify Channel — the verify button panel is posted there automatically when you save. Verify channels are often locked down for members, so make sure the bot has an explicit permission override.
+
 ## Discord Channel Permissions
 
 For the gate to work you need to set up channel permissions in Discord:
