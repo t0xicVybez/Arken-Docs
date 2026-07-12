@@ -38,5 +38,5 @@ Summarise the recent conversation in the current channel — a one-line overview
 
 AI powers two more features documented elsewhere:
 
-- **Ticket triage** — a 🤖 button in the [Ticket System](tickets.md#ai-triage) that summarises a ticket and suggests a reply for staff.
+- **Ticket triage** — the `/ticket triage` command in the [Ticket System](tickets.md#ai-triage) that summarises a ticket and suggests a reply for staff.
 - **AI Moderation** — opt-in [Auto-Mod](../setup/automod.md#ai-moderation) that flags harassment, hate, threats, and scams that keyword filters miss.

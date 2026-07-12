@@ -47,16 +47,17 @@ All ticket management is done with `/ticket` subcommands inside an open ticket c
 | `info` | Show ticket info (priority, tags, claim status) |
 | `transcript` | Generate and send the transcript now |
 | `respond` | Use a canned response |
+| `triage` | AI summary, urgency, and a suggested reply (staff only, ephemeral) — see [AI Triage](#ai-triage) |
 
 ## AI Triage
 
-Every open ticket's control panel includes a **🤖 AI** button. When a staff member clicks it, the bot reads the ticket's reason, form answers, and conversation so far, and returns a private (ephemeral) triage:
+Run **`/ticket triage`** inside an open ticket to get a private (ephemeral), staff-only triage. The bot reads the ticket's reason, form answers, and conversation so far, and returns:
 
 - **Summary** — a sentence or two describing the user's issue
 - **Urgency** — a colour-coded low / medium / high estimate
 - **Suggested reply** — a friendly first response the staff member can adapt and send
 
-The suggestion is only visible to the staff member who requested it, and it runs on demand (per click) rather than automatically, so it stays fast and inexpensive.
+The suggestion is only visible to the staff member who ran the command, and it runs on demand rather than automatically, so it stays fast and inexpensive.
 
 > Staff-only, and it degrades gracefully when no AI key is configured. On the hosted ArkenBot it works out of the box; self-hosters need `GROQ_API_KEY` (see [Installation](../self-hosting/installation.md)). Ticket content is sent to Groq to generate the triage — see the [Privacy Policy](https://arkenbot.app/privacy).
 
