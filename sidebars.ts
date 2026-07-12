@@ -27,6 +27,7 @@ const sidebars: SidebarsConfig = {
         'setup/self-roles',
         'setup/starboard',
         'setup/stream-alerts',
+        'setup/voting',
         'setup/invite-tracker',
         'setup/birthdays',
         'setup/suggestions',
