@@ -74,6 +74,7 @@ const sidebars: SidebarsConfig = {
         'addons/applications',
         'addons/tickets',
         'addons/gameservers',
+        'addons/ai',
         'addons/code-review',
         'addons/sdk',
       ],

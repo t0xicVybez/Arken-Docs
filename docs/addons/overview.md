@@ -16,6 +16,7 @@ Go to **Addon Manager** in the sidebar to see all available addons and their sta
 |---|---|
 | [Ticket System](tickets.md) | Full-featured support ticket system with panels, transcripts, SLA, and a portal |
 | [Game Server Status](gameservers.md) | Check and monitor 40+ game server types |
+| [AI Assistant](ai.md) | Ask questions and summarise channels with `/ask` and `/summarize` |
 | [Code Review](code-review.md) | AI-powered code analysis and formatting |
 | [Application System](applications.md) | Application forms with modal collection, accept/deny workflow, and role assignment |
 

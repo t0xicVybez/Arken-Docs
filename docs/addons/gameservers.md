@@ -55,4 +55,20 @@ Remove a saved server. Requires **Manage Server** permission.
 
 ## Supported Games
 
-The addon supports 40+ game types including Minecraft, Rust, Valheim, ARK, CS2, Arma 3, FiveM, 7 Days to Die, and many more. Start typing in the `game` option to search with autocomplete.
+The addon supports 40+ game types including Minecraft, Rust, Valheim, ARK, CS2, Arma 3, FiveM, Palworld, 7 Days to Die, and many more. Start typing in the `game` option to search with autocomplete.
+
+## Palworld
+
+Palworld is a special case: its dedicated servers expose no anonymous query protocol, so status is read through Palworld's official **REST API**, which requires the server's admin password.
+
+On the server, set these in `PalWorldSettings.ini` and restart:
+
+```ini
+RESTAPIEnabled=True
+RESTAPIPort=8212
+AdminPassword="your-admin-password"
+```
+
+Then add it with `/server add` and choose **Palworld**. A private popup asks for the admin password (it is never shown in the channel and is stored encrypted). Use the server's game address — the REST port defaults to `8212`.
+
+> The REST port must be reachable from the bot. If checks time out, confirm the port is open to the bot and that the server was restarted after enabling the REST API.

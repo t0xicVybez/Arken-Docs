@@ -107,6 +107,33 @@ Scans every message for known phishing and scam domains using a live blocklist u
 
 ---
 
+## AI Moderation
+
+Keyword filters only catch what you list. **AI Moderation** reads messages with an AI model and flags the ones that are genuinely harmful — subtle harassment, hate, veiled threats, and social-engineering scams that are phrased around a wordlist.
+
+It is **off by default** and opt-in per server.
+
+| Setting | Description |
+|---|---|
+| **Enable AI Moderation** | Toggle to enable/disable |
+| **Action** | `Flag only` (recommended) — posts a moderator alert with the category, severity, reason, and a jump link; nothing is deleted. `Delete` — removes the message and records it in your Auto-Mod log. |
+
+**What it flags:** harassment, hate speech, threats, sexual content directed at someone, scams/phishing, and self-harm. It is deliberately conservative — banter, criticism, casual profanity, and gaming trash-talk are **not** flagged.
+
+**How it stays cheap and safe:**
+
+- Runs only after the deterministic filters above have passed on a message.
+- Skips very short and very long messages, and is capped at **20 checks per minute per server**.
+- Never blocks or delays messages, and `Flag only` never auto-punishes anyone — your moderators decide.
+
+> **Requires an AI key.** On the hosted ArkenBot this is already configured. Self-hosters need `GROQ_API_KEY` set (see [Installation](../self-hosting/installation.md)).
+>
+> **Privacy:** when enabled, message text is sent to Groq for classification. See the [Privacy Policy](https://arkenbot.app/privacy).
+
+Administrators and members with exempt roles are never scanned.
+
+---
+
 ## Tips
 
 - Start with **delete** actions to test that rules trigger correctly before escalating to kicks/bans
