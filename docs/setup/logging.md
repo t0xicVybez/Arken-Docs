@@ -2,6 +2,8 @@
 
 ArkenBot's logging system records guild events to dedicated channels so you always have a complete audit trail.
 
+![Logging Setup in the ArkenBot dashboard](/img/screenshots/logging.png)
+
 ## Setup
 
 1. Go to **Settings** and enable **Logging**

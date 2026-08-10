@@ -2,6 +2,8 @@
 
 Play audio from YouTube, Spotify, SoundCloud, and more directly in voice channels.
 
+![Music in the ArkenBot dashboard](/img/screenshots/music.png)
+
 ## Setup
 
 1. Go to **Settings**

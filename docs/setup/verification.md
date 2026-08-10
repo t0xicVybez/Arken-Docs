@@ -6,6 +6,8 @@ sidebar_label: Verification Gate
 
 The Verification Gate requires new members to click a verify button before they can access the rest of your server. It's the simplest way to filter out bots and confirm members have read your rules.
 
+![Verification Gate in the ArkenBot dashboard](/img/screenshots/verification.png)
+
 ## How It Works
 
 1. A new member joins and is automatically assigned the **Pending Role**

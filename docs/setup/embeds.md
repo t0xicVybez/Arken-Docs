@@ -2,6 +2,8 @@
 
 Create, save, and send richly formatted Discord embeds from the dashboard.
 
+![Embeds in the ArkenBot dashboard](/img/screenshots/embeds.png)
+
 ## Setup
 
 Go to **Embeds** in the sidebar.

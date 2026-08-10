@@ -6,6 +6,8 @@ sidebar_label: Analytics
 
 ArkenBot tracks activity across your server and displays it in an easy-to-read dashboard with charts and 24-hour stat cards.
 
+![Server Analytics in the ArkenBot dashboard](/img/screenshots/analytics.png)
+
 ## Viewing Analytics
 
 Go to **Dashboard → Analytics** to see your server's data. No setup is required — analytics are collected automatically once the bot is in your server.

@@ -2,6 +2,8 @@
 
 ArkenBot's moderation system tracks every action as a numbered **case**, giving you a full audit trail for every member.
 
+![Moderation Setup in the ArkenBot dashboard](/img/screenshots/moderation.png)
+
 ## Enabling Moderation
 
 1. Go to **Settings**

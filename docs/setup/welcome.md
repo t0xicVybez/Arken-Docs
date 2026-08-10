@@ -2,6 +2,8 @@
 
 Greet new members and say goodbye to departing ones with fully customizable messages.
 
+![Welcome Messages in the ArkenBot dashboard](/img/screenshots/welcome.png)
+
 ## Setup
 
 Go to **Welcome** in the sidebar.

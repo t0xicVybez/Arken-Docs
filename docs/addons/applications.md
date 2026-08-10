@@ -6,6 +6,8 @@ sidebar_label: Application System
 
 The Application System addon lets you create custom application forms that members fill out directly inside Discord using modals. Staff receive submissions in a review channel and can accept or deny with a single click.
 
+![Application System in the ArkenBot dashboard](/img/screenshots/applications.png)
+
 ## Installation
 
 Go to **Addon Manager** and install **Application System**.

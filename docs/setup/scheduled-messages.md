@@ -2,6 +2,8 @@
 
 Automatically post messages to any channel at a specific time, with optional repeating.
 
+![Scheduled Messages in the ArkenBot dashboard](/img/screenshots/scheduled-messages.png)
+
 ## Setup
 
 Go to **Scheduled Messages** in the sidebar.

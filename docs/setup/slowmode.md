@@ -2,6 +2,8 @@
 
 Automatically apply Discord's slowmode to a channel when it becomes too active, then remove it once traffic calms down.
 
+![Auto-Slowmode in the ArkenBot dashboard](/img/screenshots/slowmode.png)
+
 ## Setup
 
 Go to **Auto-Slowmode** in the sidebar.

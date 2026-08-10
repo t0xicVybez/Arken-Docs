@@ -2,6 +2,8 @@
 
 Get ArkenBot fully set up in your server in under 5 minutes.
 
+![Quick Start in the ArkenBot dashboard](/img/screenshots/overview.png)
+
 ## Step 1 — Invite the Bot
 
 Invite ArkenBot to your server using the invite link and grant the requested permissions. The bot requires:

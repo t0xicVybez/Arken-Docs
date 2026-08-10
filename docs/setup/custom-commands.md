@@ -6,6 +6,8 @@ sidebar_position: 20
 
 Create your own prefix-based commands with custom text or embed responses.
 
+![Custom Commands in the ArkenBot dashboard](/img/screenshots/custom-commands.png)
+
 ## Overview
 
 Custom commands let you define commands that members can trigger using the server prefix (`!`). Responses can be plain text or styled embeds, and each command supports aliases, cooldowns, role restrictions, and more.

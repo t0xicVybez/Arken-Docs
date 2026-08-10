@@ -6,6 +6,8 @@ sidebar_label: Temp Voice Channels
 
 ArkenBot can automatically create and delete personal voice channels on demand using **Join-to-Create** trigger channels. You can configure multiple triggers, each optionally routing created channels into a specific category.
 
+![Temporary Voice Channels in the ArkenBot dashboard](/img/screenshots/temp-voice.png)
+
 ## Setup
 
 1. Go to **Dashboard → Temp Voice** (under Tools in the sidebar)

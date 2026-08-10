@@ -2,6 +2,8 @@
 
 Let members self-assign roles by reacting to an embed in any channel.
 
+![Reaction Roles in the ArkenBot dashboard](/img/screenshots/reaction-roles.png)
+
 ## Setup
 
 Go to **Reaction Roles** in the sidebar.

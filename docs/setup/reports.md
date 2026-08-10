@@ -6,6 +6,8 @@ sidebar_label: Reports
 
 ArkenBot provides a member report system that lets users flag other members for staff review, without needing to DM a moderator directly.
 
+![Reports in the ArkenBot dashboard](/img/screenshots/reports.png)
+
 ## Setup
 
 1. Go to **Dashboard → Reports** (under Moderation in the sidebar)

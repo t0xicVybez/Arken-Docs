@@ -2,6 +2,8 @@
 
 Full-featured support ticket system with panels, staff controls, transcripts, SLA warnings, ratings, canned responses, and a dashboard portal.
 
+![Ticket System in the ArkenBot dashboard](/img/screenshots/tickets.png)
+
 ## Setup
 
 Install the **Ticket System** addon from the Addon Manager, then go to **Tickets** in the sidebar.

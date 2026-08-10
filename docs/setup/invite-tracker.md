@@ -2,6 +2,8 @@
 
 Track how many members each user has invited to your server.
 
+![Invite Tracker in the ArkenBot dashboard](/img/screenshots/invite-tracker.png)
+
 ## Setup
 
 Go to **Invite Tracker** in the sidebar.

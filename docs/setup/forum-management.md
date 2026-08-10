@@ -6,6 +6,8 @@ sidebar_label: Forum Management
 
 ArkenBot can automate actions in Discord forum channels — posting a template message whenever a new thread is created and automatically applying a tag to it.
 
+![Forum Management in the ArkenBot dashboard](/img/screenshots/forum-management.png)
+
 ## Setup
 
 1. Go to **Dashboard → Forum Management** (under Tools in the sidebar)

@@ -6,6 +6,8 @@ sidebar_label: monday.com Alerts
 
 ArkenBot can post detailed Discord notifications when events happen on a monday.com board — items created, renamed, moved between groups, column changes, comments, and more.
 
+![monday.com Alerts in the ArkenBot dashboard](/img/screenshots/monday.png)
+
 ## How It Works
 
 Each alert you create generates a unique **Webhook URL**. You paste that URL into monday.com's built-in Webhooks integration, and monday.com pushes board events to ArkenBot, which turns them into Discord embeds.

@@ -2,6 +2,8 @@
 
 Let members submit ideas and vote on them. Staff can review and update the status of each suggestion.
 
+![Suggestions in the ArkenBot dashboard](/img/screenshots/suggestions.png)
+
 ## Setup
 
 Go to **Suggestions** in the sidebar.

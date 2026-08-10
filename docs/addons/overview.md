@@ -2,6 +2,8 @@
 
 Addons extend ArkenBot with specialized features beyond the core bot. Each addon is a self-contained module that adds slash commands, event listeners, and its own settings.
 
+![Addons Overview in the ArkenBot dashboard](/img/screenshots/addons.png)
+
 ## Managing Addons
 
 Go to **Addon Manager** in the sidebar to see all available addons and their status.

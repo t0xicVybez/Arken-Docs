@@ -2,6 +2,8 @@
 
 The **Settings** page is the central configuration hub for your server. Access it from the sidebar under your server name.
 
+![General Settings in the ArkenBot dashboard](/img/screenshots/general-settings.png)
+
 ## Bot Appearance
 
 | Setting | Description |

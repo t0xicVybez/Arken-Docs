@@ -6,6 +6,8 @@ sidebar_label: X / Twitter Feeds
 
 ArkenBot can monitor X (Twitter) accounts and post a Discord notification whenever they publish a new tweet. The bot checks every 5 minutes.
 
+![X / Twitter Feeds in the ArkenBot dashboard](/img/screenshots/twitter-feeds.png)
+
 ## Requirements
 
 X/Twitter alerts require a Bearer Token in the bot's `.env` file:

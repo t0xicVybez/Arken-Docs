@@ -6,6 +6,8 @@ sidebar_label: Polls
 
 ArkenBot lets members and staff create polls directly in Discord. The dashboard gives moderators a central place to view, close, and delete polls across the server.
 
+![Polls in the ArkenBot dashboard](/img/screenshots/polls.png)
+
 ## Creating a Poll
 
 Polls are created in Discord using the `/poll` slash command — not from the dashboard.

@@ -2,6 +2,8 @@
 
 Display live server statistics in voice channel names that update automatically.
 
+![Stats Channels in the ArkenBot dashboard](/img/screenshots/stats-channels.png)
+
 ## Setup
 
 Go to **Stats Channels** in the sidebar.

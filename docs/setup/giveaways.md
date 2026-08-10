@@ -2,6 +2,8 @@
 
 Run giveaways in your server with automatic winner selection when the timer ends.
 
+![Giveaways in the ArkenBot dashboard](/img/screenshots/giveaways.png)
+
 ## Setup
 
 Giveaways are started entirely via Discord slash commands — no dashboard configuration is required. The **Giveaways** page in the dashboard provides a read-only overview.

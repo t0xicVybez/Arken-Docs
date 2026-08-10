@@ -2,6 +2,8 @@
 
 Let members pick their own roles using slash commands — no panels, no reactions, just a simple command.
 
+![Self-Assignable Roles in the ArkenBot dashboard](/img/screenshots/self-roles.png)
+
 ## How It Works
 
 Admins register roles as "self-assignable" and give each a short name. Members can then run `/selfassignrole <name>` to claim a role or `/selfremoverole <name>` to drop it. Autocomplete makes discovery instant — members never have to memorise names.

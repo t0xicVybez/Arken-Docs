@@ -2,6 +2,8 @@
 
 The leveling system rewards active members with XP, levels, rank cards, and configurable role rewards.
 
+![Leveling Setup in the ArkenBot dashboard](/img/screenshots/leveling.png)
+
 ## Enabling Leveling
 
 1. Go to **Settings**

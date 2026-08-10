@@ -2,6 +2,8 @@
 
 Check and monitor game servers for 40+ supported titles directly from Discord.
 
+![Game Server Status in the ArkenBot dashboard](/img/screenshots/game-servers.png)
+
 ## Setup
 
 Install the **Game Server Status** addon from the Addon Manager. No additional configuration is required to start querying servers by address.

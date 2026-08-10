@@ -2,6 +2,8 @@
 
 A community game where members count together in sequence. One wrong number resets the count.
 
+![Counting in the ArkenBot dashboard](/img/screenshots/counting.png)
+
 ## Requirements
 
 The Counting feature is part of the **Counting Addon**. Install it first via **Addon Manager**, then configure it here.

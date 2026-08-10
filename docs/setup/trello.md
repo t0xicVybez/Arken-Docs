@@ -6,6 +6,8 @@ sidebar_label: Trello Alerts
 
 ArkenBot can post Discord notifications when things happen on a Trello board — cards created, moved, renamed, commented on, labels added, checklists ticked, and more.
 
+![Trello Alerts in the ArkenBot dashboard](/img/screenshots/trello.png)
+
 ## How It Works
 
 Unlike monday.com, Trello has no webhook UI — webhooks can only be created through Trello's API. ArkenBot handles that for you: you provide your Trello API key and token once, and ArkenBot registers the webhook with Trello automatically.

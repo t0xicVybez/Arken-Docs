@@ -2,6 +2,8 @@
 
 Reward your members for voting on [top.gg](https://top.gg) — free votes that boost your ranking, in exchange for roles, XP, and a public thank-you. Configure everything under **Dashboard → Vote Rewards** (in the Community section).
 
+![Vote Rewards in the ArkenBot dashboard](/img/screenshots/voting.png)
+
 ## Two kinds of votes
 
 top.gg lets people vote for two different things, and Arken Bot supports both:

@@ -6,6 +6,8 @@ sidebar_label: Anti-Nuke
 
 Anti-Nuke protects your server from rapid destructive actions — mass channel deletions, mass role deletions, and mass bans — by automatically detecting and responding to the offending user.
 
+![Anti-Nuke in the ArkenBot dashboard](/img/screenshots/anti-nuke.png)
+
 ## Setup
 
 1. Go to **Dashboard → Anti-Nuke** (under Moderation in the sidebar)

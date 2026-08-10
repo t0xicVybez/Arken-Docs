@@ -6,6 +6,8 @@ sidebar_label: RSS Feeds
 
 ArkenBot can monitor any RSS or podcast feed and post a Discord notification whenever a new item is published. No API key required. The bot checks every 5 minutes.
 
+![RSS Feeds in the ArkenBot dashboard](/img/screenshots/rss-feeds.png)
+
 ## Setup
 
 1. Go to **Dashboard → RSS Feeds**

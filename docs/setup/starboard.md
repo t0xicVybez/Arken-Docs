@@ -2,6 +2,8 @@
 
 Automatically repost popular messages to a dedicated channel when they collect enough star reactions.
 
+![Starboard in the ArkenBot dashboard](/img/screenshots/starboard.png)
+
 ## Setup
 
 Go to **Starboard** in the sidebar.

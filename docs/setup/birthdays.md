@@ -2,6 +2,8 @@
 
 Automatically announce member birthdays and assign a special birthday role on their special day.
 
+![Birthday Tracker in the ArkenBot dashboard](/img/screenshots/birthdays.png)
+
 ## Setup
 
 Go to **Birthdays** in the sidebar.

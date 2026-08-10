@@ -2,6 +2,8 @@
 
 Auto-Mod automatically enforces rules so your moderators don't have to watch every channel. Go to **Auto-Mod** in the sidebar to configure it.
 
+![Auto-Mod Setup in the ArkenBot dashboard](/img/screenshots/automod.png)
+
 ## Exemptions (Set These First)
 
 Before enabling any rules, configure exemptions to avoid false positives:

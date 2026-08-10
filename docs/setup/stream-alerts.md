@@ -2,6 +2,8 @@
 
 Post automatic notifications in Discord when a creator goes live, posts a tweet, a subreddit gets a new post, or an RSS feed updates.
 
+![Stream Alerts in the ArkenBot dashboard](/img/screenshots/stream-alerts.png)
+
 ## Setup
 
 Go to **Stream Alerts** in the sidebar.
