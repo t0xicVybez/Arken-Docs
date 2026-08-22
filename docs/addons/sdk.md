@@ -284,6 +284,79 @@ Every command handler, event handler, and lifecycle hook receives an `AddonConte
 | `ctx.getSettings(guildId)` | `Promise<Record<string, unknown>>` | All settings for a guild |
 | `ctx.getSetting(guildId, key, default?)` | `Promise<T>` | A single setting value |
 | `ctx.getGuild(guildId)` | `Guild \| undefined` | Guild from the client cache |
+| `ctx.resolveLocale(arg)` | `Promise<string>` | Picks the viewer's language (see [Localization](#localization-i18n)) |
+| `ctx.t(key, locale, vars?)` | `string` | Translates a key from your addon's catalogs |
+
+---
+
+## Localization (i18n)
+
+Your addon can speak the same 11 languages as the core bot. Ship message catalogs on your `AddonDefinition` and the runtime wires up translation for you — no extra dependencies.
+
+### 1. Declare catalogs with `locales`
+
+`locales` is a map of locale code → a nested object of message strings. Provide `en-US` (the fallback) plus any languages you want to support.
+
+```ts
+// src/locales.ts
+import type { AddonMessages } from '@arkenbot/addon-sdk';
+
+export const locales: AddonMessages = {
+  'en-US': {
+    greet: { hello: 'Hello, {name}!' },
+  },
+  'es-ES': {
+    greet: { hello: '¡Hola, {name}!' },
+  },
+};
+```
+
+```ts
+// src/index.ts
+import { defineAddon } from '@arkenbot/addon-sdk';
+import { locales } from './locales.js';
+
+export default defineAddon({
+  locales,
+  manifest: { /* … */ },
+  // …
+});
+```
+
+### 2. Resolve the viewer's language
+
+`ctx.resolveLocale(arg)` returns the locale code to reply in. It follows the same rules as the core bot: the user's saved preference, then their Discord client language, then the guild default, falling back to `en-US`.
+
+A discord.js `ChatInputCommandInteraction` (or context-menu interaction) satisfies the argument directly. For event handlers that don't have an interaction, pass a `LocaleResolvable`:
+
+```ts
+interface LocaleResolvable {
+  user: { id: string };
+  locale?: string | null;
+  guildId?: string | null;
+  guildLocale?: string | null;
+}
+```
+
+### 3. Translate with `ctx.t`
+
+`ctx.t(key, locale, vars?)` looks up a dot-path `key`, interpolates `{placeholders}` from `vars`, and falls back requested-locale → `en-US` → the key itself, so a missing translation is always visible but never throws.
+
+```ts
+async execute(interaction, ctx) {
+  const loc = await ctx.resolveLocale(interaction);
+  const t = (k: string, v?: Record<string, string | number>) => ctx.t(k, loc, v);
+
+  await interaction.reply(t('greet.hello', { name: interaction.user.username }));
+}
+```
+
+### Choosing the right locale
+
+- **A reply or DM to one person** → resolve from that person: `ctx.resolveLocale(interaction)`, or `ctx.resolveLocale({ user: { id: targetUserId }, guildId, guildLocale: ctx.getGuild(guildId)?.preferredLocale })`.
+- **A message that stays in a channel for everyone** (control panels, staff logs, transcripts) → use the guild's language so it reads consistently: `ctx.resolveLocale({ user: { id: '' }, guildId, guildLocale: ctx.getGuild(guildId)?.preferredLocale })`.
+
+> Keep `{placeholders}`, emoji, and slash-command names identical across every locale. Slash-command and option **names** stay English (Discord restricts them to a lowercase token set); their descriptions can still be localized separately.
 
 ---
 

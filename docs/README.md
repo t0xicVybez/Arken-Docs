@@ -31,6 +31,7 @@ ArkenBot is a fully-featured Discord bot built for community management, moderat
 | **Temp Voice** | Create-to-Join voice channels — auto-created and auto-deleted |
 | **Applications** | Application forms with modal collection, review workflow, and role assignment |
 | **Addons** | Extensible addon system for game servers, tickets, and more |
+| **Languages** | Fully translated into 11 languages — bot, dashboard, and site — with automatic per-user detection |
 
 ## Dashboard
 

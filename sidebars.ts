@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'setup/general-settings',
+        'setup/languages',
         'setup/moderation',
         'setup/automod',
         'setup/leveling',

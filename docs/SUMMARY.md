@@ -7,6 +7,7 @@
 ## Server Setup Guide
 - [Quick Start](setup/quick-start.md)
 - [General Settings](setup/general-settings.md)
+- [Languages & Localization](setup/languages.md)
 - [Moderation Setup](setup/moderation.md)
 - [Auto-Mod Setup](setup/automod.md)
 - [Leveling Setup](setup/leveling.md)
