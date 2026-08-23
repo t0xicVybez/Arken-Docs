@@ -51,8 +51,6 @@ const sidebars: SidebarsConfig = {
         'setup/analytics',
         'setup/announcements',
         'setup/rss-feeds',
-        'setup/reddit-feeds',
-        'setup/twitter-feeds',
         'setup/monday',
         'setup/trello',
       ],

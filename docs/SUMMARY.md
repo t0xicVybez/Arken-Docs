@@ -36,8 +36,6 @@
 - [Analytics](setup/analytics.md)
 - [Bot Announcements](setup/announcements.md)
 - [RSS Feeds](setup/rss-feeds.md)
-- [Reddit Feeds](setup/reddit-feeds.md)
-- [X / Twitter Feeds](setup/twitter-feeds.md)
 
 ## Commands
 - [Moderation](commands/moderation.md)

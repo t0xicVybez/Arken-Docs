@@ -55,7 +55,6 @@ These are embedded into the Next.js build **at compile time**, not at runtime. I
 | `LAVALINK_HOST / PORT / PASSWORD` | Required for music playback (see [Deployment](deployment#lavalink)) |
 | `TWITCH_CLIENT_ID / SECRET` | Required for Twitch stream alerts |
 | `YOUTUBE_API_KEY` | Required for YouTube stream alerts |
-| `TWITTER_BEARER_TOKEN` | Required for Twitter/X stream alerts |
 | `GROQ_API_KEY` | Enables all AI features — the AI Assistant (`/ask`, `/summarize`), ticket AI triage, AI Moderation, and Code Review. Without it, these features report AI as unavailable. |
 
 ## Install Dependencies
