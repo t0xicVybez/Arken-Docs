@@ -14,9 +14,7 @@ ArkenBot is a fully-featured Discord bot built for community management, moderat
 | Category | Features |
 |---|---|
 | **Moderation** | Ban, kick, mute, warn, case history, temp-bans, purge |
-| **Auto-Mod** | Spam, word filter, link blocker, mention limits, anti-raid, anti-caps, anti-phishing, account-age gate & alt/new-account flagging |
-| **Economy** | Currency, wallet & bank, daily/work rewards, pay & rob, shop with role rewards, coinflip/slots/dice, wealth leaderboard |
-| **Modmail** | Private DM-based support threads with two-way relay, staff channels, and transcripts |
+| **Auto-Mod** | Spam, word filter, link blocker, mention limits, anti-raid, anti-caps, anti-phishing |
 | **Leveling** | XP system, rank cards, leaderboard, level roles, streaks, achievements, XP role multipliers, time-filtered leaderboard |
 | **Welcome** | Custom welcome messages, DMs, leave messages, auto-role |
 | **Logging** | Full audit log for messages, members, and mod actions |
