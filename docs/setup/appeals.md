@@ -20,3 +20,18 @@ In **Server Settings** on the dashboard, enable **Appeals** and pick an **Appeal
 5. Each member can have one pending appeal per server at a time
 
 > Because the appeal button lives in a DM, it works even after a ban when the user is no longer in the server. ArkenBot needs **Ban Members** / **Moderate Members** to reverse the action on approval.
+
+## Where the appeal button appears
+
+The **Appeal** button is attached to the DM ArkenBot sends when a member is:
+
+- Banned or muted with `/ban`, `/mute`, or the **🔨 Ban / ⏱ Timeout** right-click menu
+- Banned by the account-age / alt-protection gate
+
+For bans, the DM is sent **before** the ban so it can be delivered, and it's even attempted for ban-by-ID (it reaches the user if they share another server with the bot).
+
+## If the user's DMs are closed
+
+Members who can't receive DMs (or who dismissed the button) can still appeal from the web: send them to **`/appeal`** on your ArkenBot site. They log in with Discord, see every server where they're currently banned or muted (that has appeals enabled), and submit an appeal there. It lands in the same review channel with the same Approve / Deny buttons.
+
+> Staff can also review and decide appeals from the dashboard's **Appeals** page — approvals and denials there stay in sync with the Discord buttons.
