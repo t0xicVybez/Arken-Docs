@@ -24,7 +24,7 @@ When you add a YouTube alert you can choose what to be notified about:
 - **Live streams** — fires the moment the channel goes live.
 - **New uploads** — fires when the channel posts a new (non-stream) video.
 
-Both are on by default; untick either to only get the other. YouTube alerts are **near-instant** — ArkenBot is notified by YouTube directly (push), so there's no polling delay, and idle channels use no API quota. A finished livestream's leftover video won't fire a duplicate "new upload" alert.
+Both are on by default; untick either to only get the other. YouTube alerts are fast and quota-friendly: ArkenBot watches each channel's public feed directly (typically within a minute or two, and near-instant when YouTube's push service is available), and idle channels use no API quota. A finished livestream's leftover video won't fire a duplicate "new upload" alert.
 
 > **Note:** Twitch requires API credentials configured on the server, and YouTube requires a YouTube Data API key. Kick and RSS work without any credentials. Contact your bot administrator if alerts are not firing.
 
