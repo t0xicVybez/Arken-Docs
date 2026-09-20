@@ -63,6 +63,14 @@ View detailed engagement stats for a member (message count, streak, days active,
 
 ---
 
+## /prestige
+
+Reset your level back to the start in exchange for a permanent **prestige rank** — a badge that shows you've maxed out and started over. Your prestige rank is shown on your rank card and profile.
+
+No options. Prestige must be enabled by an admin, and you must have reached the server's configured **prestige level** threshold to use it.
+
+---
+
 ## /leveling
 
 Admin commands for managing the leveling system.

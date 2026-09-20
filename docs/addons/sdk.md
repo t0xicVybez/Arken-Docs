@@ -291,7 +291,7 @@ Every command handler, event handler, and lifecycle hook receives an `AddonConte
 
 ## Localization (i18n)
 
-Your addon can speak the same 11 languages as the core bot. Ship message catalogs on your `AddonDefinition` and the runtime wires up translation for you — no extra dependencies.
+Your addon can speak the same 14 languages as the core bot. Ship message catalogs on your `AddonDefinition` and the runtime wires up translation for you — no extra dependencies.
 
 ### 1. Declare catalogs with `locales`
 

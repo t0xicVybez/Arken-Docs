@@ -8,6 +8,8 @@ Automatically reply to messages that match a **regular expression** pattern. Unl
 
 Auto-responses are managed from **Commands** in the dashboard sidebar, in the **Auto-Responses** section directly below Custom Commands.
 
+![Auto-Responses on the Commands page in the ArkenBot dashboard](/img/screenshots/custom-commands.png)
+
 ---
 
 ## How It Works

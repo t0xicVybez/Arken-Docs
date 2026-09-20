@@ -4,7 +4,7 @@ sidebar_label: Languages
 
 # Languages & Localization
 
-ArkenBot speaks your language. The bot, the web dashboard, and the public site are all fully translated into **11 languages**, so your members can use ArkenBot in whatever language they're most comfortable with — no configuration required.
+ArkenBot speaks your language. The bot, the web dashboard, and the public site are all fully translated into **14 languages**, so your members can use ArkenBot in whatever language they're most comfortable with — no configuration required.
 
 ## Supported languages
 
@@ -15,9 +15,12 @@ ArkenBot speaks your language. The bot, the web dashboard, and the public site a
 | French | Français | `fr` |
 | German | Deutsch | `de` |
 | Italian | Italiano | `it` |
+| Dutch | Nederlands | `nl` |
 | Portuguese (Brazil) | Português do Brasil | `pt-BR` |
 | Russian | Русский | `ru` |
 | Polish | Polski | `pl` |
+| Turkish | Türkçe | `tr` |
+| Indonesian | Bahasa Indonesia | `id` |
 | Japanese | 日本語 | `ja` |
 | Korean | 한국어 | `ko` |
 | Chinese (Simplified) | 中文 | `zh-CN` |

@@ -196,3 +196,50 @@ Update the status of a member-submitted suggestion. Staff only.
 Each subcommand accepts:
 - `id` (required) — The suggestion ID
 - `note` (optional) — A staff note explaining the decision
+
+---
+
+## /note
+
+Keep private staff notes on a member. Notes are only visible to moderators and are separate from warnings and cases.
+
+**Required permission:** Manage Messages
+
+### Subcommands
+
+| Subcommand | Options | Description |
+|---|---|---|
+| `add` | `user`, `content` | Add a note to a user |
+| `list` | `user` | List all notes on a user |
+| `remove` | `user`, `id` | Remove a specific note by ID |
+
+---
+
+## /verification
+
+Manage the verification gate that holds new members behind a button before they gain access.
+
+**Required permission:** Administrator
+
+### Subcommands
+
+| Subcommand | Options | Description |
+|---|---|---|
+| `setup` | `pending-role`, `member-role`, `channel` | Configure and enable the gate — the pending role is given on join, the member role after they verify, and the verify button lives in the chosen channel. |
+| `disable` | — | Turn the verification gate off. |
+
+See [Verification Setup](../setup/verification.md) for the full guide.
+
+---
+
+## Right-click (context menu) actions
+
+ArkenBot also adds moderator actions to Discord's right-click **Apps** menu, so you can act on a member or message without typing a command:
+
+| Menu item | Equivalent | Permission |
+|---|---|---|
+| **🔨 Ban Member** | `/ban` | Ban Members |
+| **⏱ Timeout Member** | `/mute` | Moderate Members |
+| **⚠️ Warn Member** | `/warn` | Manage Messages |
+
+Right-click a user (or one of their messages) → **Apps** → choose the action. A short popup collects the reason, and the same case/audit entry is created as the slash command.

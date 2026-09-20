@@ -4,6 +4,14 @@ Get ArkenBot fully set up in your server in under 5 minutes.
 
 ![Quick Start in the ArkenBot dashboard](/img/screenshots/overview.png)
 
+## Fastest path: the Setup Wizard
+
+If you'd rather be guided, open **Setup Wizard** from the dashboard sidebar (under Home). It walks you step-by-step through the essentials — logging, moderation, welcome messages, auto-role, and more — and applies everything for you at the end.
+
+![Setup Wizard in the ArkenBot dashboard](/img/screenshots/setup-wizard.png)
+
+Prefer to do it manually? Follow the steps below.
+
 ## Step 1 — Invite the Bot
 
 Invite ArkenBot to your server using the invite link and grant the requested permissions. The bot requires:

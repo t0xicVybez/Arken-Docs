@@ -103,3 +103,46 @@ Create a poll with up to 10 options.
 Post a counting game announcement in the counting channel. Requires the Counting addon to be installed and configured.
 
 No options.
+
+---
+
+## /report
+
+Report a member to the moderation team. The report is sent privately to the staff channel configured with `/report-setup`.
+
+| Option | Required | Description |
+|---|---|---|
+| `user` | Yes | The user to report |
+| `reason` | Yes | Why you're reporting them |
+
+You can also right-click a message → **Apps** to report it. See [Reports Setup](../setup/reports.md).
+
+---
+
+## /report-setup
+
+Configure where member reports are delivered.
+
+**Required permission:** Administrator
+
+| Option | Required | Description |
+|---|---|---|
+| `channel` | Yes | The channel where reports are sent |
+
+---
+
+## /vote
+
+Vote for ArkenBot on top.gg and see your rewards for voting.
+
+| Option | Required | Description |
+|---|---|---|
+| `reminders` | No | Set to `true` to get a DM when you can vote again |
+
+---
+
+## /topvoters
+
+Show the leaderboard of the members who support the bot the most through top.gg votes.
+
+No options.

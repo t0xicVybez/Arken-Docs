@@ -63,6 +63,48 @@ Set a personal reminder. The bot will DM you when the time is up.
 
 ---
 
+## /invite
+
+Get a link to invite ArkenBot to another server.
+
+No options.
+
+---
+
+## /language
+
+Set or view the language ArkenBot uses when replying **to you** — independent of the server's language.
+
+### Subcommands
+
+| Subcommand | Options | Description |
+|---|---|---|
+| `set` | `language` | Choose the language for the bot's replies to you |
+| `show` | — | Show your currently selected language |
+| `clear` | — | Clear your preference and go back to auto-detect |
+
+See [Languages](../setup/languages.md) for the full list of supported languages.
+
+---
+
+## /event
+
+Schedule events with RSVP buttons. Members RSVP **Going / Maybe / Not going**, and can optionally be given a role when they mark themselves as going.
+
+**Required permission:** Manage Events (to create or cancel)
+
+### Subcommands
+
+| Subcommand | Options | Description |
+|---|---|---|
+| `create` | `title`, `when`, `description`, `location`, `role`, `channel` | Create a scheduled event. `when` accepts a relative time (`2d`, `6h`) or an absolute date (`2026-09-01 18:00`). |
+| `list` | — | List upcoming events |
+| `cancel` | `id` | Cancel an upcoming event (ID from `/event list`) |
+
+See [Events Setup](../setup/events.md).
+
+---
+
 ## /autoresponse
 
 Manage regex-triggered auto-responses for the server. Messages matching a pattern will receive an automatic reply.
@@ -112,6 +154,61 @@ Manage giveaways. See [Giveaways Setup](../setup/giveaways.md) for full details.
 Show a quick summary of the bot's current status, uptime, and resource usage.
 
 No options.
+
+---
+
+## /analytics
+
+View or configure server analytics — 30-day activity and member-flow charts.
+
+**Required permission:** Manage Server
+
+### Subcommands
+
+| Subcommand | Options | Description |
+|---|---|---|
+| `view` | — | Post the 30-day activity and member-flow charts in the current channel |
+| `set-channel` | `channel` | Set a channel for automatic **weekly** analytics reports |
+| `disable` | — | Stop automatic weekly analytics reports |
+
+See [Analytics Setup](../setup/analytics.md).
+
+---
+
+## /modmail
+
+Set up and manage DM-based modmail support. Members open a thread simply by DMing the bot; staff reply from a private channel.
+
+**Required permission:** Manage Server
+
+### Subcommands
+
+| Subcommand | Key options | Description |
+|---|---|---|
+| `setup` | `category`, `staff-role`, `log-channel`, `anonymous`, `greeting`, `auto-close-hours`, `feedback` | Enable modmail and configure it |
+| `config` | — | Show the current modmail configuration |
+| `close` | — | Close the current modmail thread (run inside a modmail channel) |
+| `disable` | — | Turn modmail off |
+
+See [Modmail Setup](../setup/modmail.md).
+
+---
+
+## /forum-setup
+
+Automate forum-channel threads — post a template message and auto-apply a tag to every new thread.
+
+**Required permission:** Administrator
+
+### Subcommands
+
+| Subcommand | Options | Description |
+|---|---|---|
+| `set-template` | `channel`, `message` | Post a template message in each new thread |
+| `set-auto-tag` | `channel`, `tag-id` | Automatically apply a tag to new threads |
+| `clear` | `channel` | Remove forum configuration for a channel |
+
+See [Forum Management Setup](../setup/forum-management.md).
 
 ---
 
@@ -167,3 +264,5 @@ It checks:
 If ArkenBot has **Administrator**, it short-circuits to a simple "all good."
 
 > The same information is available in the dashboard under **Server → Permission Health**, including a per-channel breakdown and the re-invite button.
+
+![Permission Health in the ArkenBot dashboard](/img/screenshots/permission-health.png)

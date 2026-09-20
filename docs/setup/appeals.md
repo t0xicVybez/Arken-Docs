@@ -2,6 +2,8 @@
 
 Let members who were banned or muted appeal the action — right from their DMs, with staff approving or denying in a review channel.
 
+![Appeals review in the ArkenBot dashboard](/img/screenshots/appeals.png)
+
 ## Setup
 
 In **Server Settings** on the dashboard, enable **Appeals** and pick an **Appeal review channel** where appeals are posted for staff.

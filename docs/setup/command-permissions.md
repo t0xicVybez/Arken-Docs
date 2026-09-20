@@ -2,6 +2,8 @@
 
 Restrict or allow specific slash commands to certain roles.
 
+![Commands and role permissions in the ArkenBot dashboard](/img/screenshots/custom-commands.png)
+
 ## Setup
 
 Go to **Commands** in the sidebar. The **Role Permissions** section is at the bottom of the page.

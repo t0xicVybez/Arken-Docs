@@ -18,9 +18,13 @@ Go to **Addon Manager** in the sidebar to see all available addons and their sta
 |---|---|
 | [Ticket System](tickets.md) | Full-featured support ticket system with panels, transcripts, SLA, and a portal |
 | [Game Server Status](gameservers.md) | Check and monitor 40+ game server types |
+| [Game Admin (RCON)](gameadmin.md) | Remote console control, scheduled commands, and an audit log for game servers |
 | [AI Assistant](ai.md) | Ask questions and summarise channels with `/ask` and `/summarize` |
 | [Code Review](code-review.md) | AI-powered code analysis and formatting |
 | [Application System](applications.md) | Application forms with modal collection, accept/deny workflow, and role assignment |
+| [Anonymous Confessions](confessions.md) | Anonymous confessions board with staff approval, reply threads, cooldowns, and author lookup |
+| [FAQ / Knowledge Base](faq.md) | Searchable Q&A knowledge base with `/faq` autocomplete — no AI required |
+| [GitHub Monitor](github-monitor.md) | Post new commits, pull requests, and issues from public GitHub repos |
 
 ## How Addons Work
 

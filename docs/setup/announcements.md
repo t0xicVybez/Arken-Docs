@@ -6,6 +6,8 @@ sidebar_label: Bot Announcements
 
 Opt your server in to receive official ArkenBot update announcements — new features, patches, and important notices — delivered directly to a channel of your choice.
 
+![Announcements settings in the ArkenBot dashboard](/img/screenshots/announcements.png)
+
 ## Setup
 
 1. Go to **Dashboard → Announcements** (under Settings in the sidebar)

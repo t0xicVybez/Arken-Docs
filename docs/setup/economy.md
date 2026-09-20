@@ -1,6 +1,8 @@
 # Economy
 
-Give your server a full currency system — members earn, spend, gamble, and compete on a wealth leaderboard, all configurable from the dashboard.
+Give your server a full currency system — members earn, spend, gamble, trade, and compete on a wealth leaderboard, all configurable from the dashboard.
+
+![Economy settings in the ArkenBot dashboard](/img/screenshots/economy.png)
 
 ## Setup
 
@@ -27,13 +29,29 @@ Go to **Economy** in the dashboard sidebar and toggle **Enable economy** on. Set
 | `/daily` | Claim the daily reward (with streak bonus) |
 | `/work` | Earn a random reward on a cooldown |
 | `/pay <user> <amount>` | Transfer currency from your wallet |
-| `/bank deposit\|withdraw <amount>` | Move currency between wallet and bank |
+| `/bank deposit\|withdraw <amount>` | Move currency between wallet and bank (amount, or `all`) |
 | `/rob <user>` | Risk stealing from another member |
 | `/shop view` / `/shop buy <item>` | Browse and purchase items |
 | `/inventory [user]` | List owned items |
-| `/gamble coinflip\|slots\|dice <amount>` | Play a minigame |
+| `/trade <user> [coins] [item]` | Offer coins and/or an item to another member |
+| `/gamble coinflip\|slots\|dice\|roulette\|highlow <amount>` | Play a minigame of chance |
+| `/blackjack <amount>` | Play a hand of blackjack against the dealer |
+| `/lottery buy <tickets>` / `/lottery info` | Buy tickets for the weekly server lottery, or check the pot |
 | `/richest` | View the wealth leaderboard |
 | `/economy give\|take\|reset\|additem\|removeitem` | Admin controls (Manage Server) |
+
+### Games of chance
+
+| Game | How it plays |
+|---|---|
+| `/gamble coinflip <amount>` | Pick heads or tails — a win pays 0.95:1. |
+| `/gamble slots <amount>` | Spin the slot machine for a matching payout. |
+| `/gamble dice <amount>` | Beat the house's two-dice roll. |
+| `/gamble roulette <amount> <bet>` | Bet on red, black, green, or a number 0–36. |
+| `/gamble highlow <amount> <guess>` | Guess whether the next number (1–100) is higher or lower. |
+| `/blackjack <amount>` | Hit or stand to beat the dealer without busting. |
+
+The **maximum bet** for all games is set by the **Gambling → maximum bet** option in the dashboard.
 
 ## The Shop
 

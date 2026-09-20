@@ -4,6 +4,8 @@ Control your game servers over **RCON** directly from Discord — run console co
 
 Supports **Minecraft, Palworld, ARK, Rust, Valheim, and 7 Days to Die**. Every command requires the **Manage Server** permission, and RCON passwords are encrypted at rest.
 
+![Game Admin page in the ArkenBot dashboard](/img/screenshots/game-admin.png)
+
 ## Setup
 
 Install the **Game Server Admin** addon from the Addon Manager, enable RCON on your game server (see [per-game notes](#per-game-notes)), then add it:

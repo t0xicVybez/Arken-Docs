@@ -2,6 +2,8 @@
 
 Stop raids and throwaway alt accounts at the door. ArkenBot can automatically act on brand-new accounts as they join, and flag young accounts for staff review. These controls live under **Auto-Mod** in the dashboard.
 
+![Auto-Mod settings in the ArkenBot dashboard](/img/screenshots/automod.png)
+
 ## Minimum Account Age
 
 Reject accounts younger than a threshold when they join.

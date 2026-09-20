@@ -1,6 +1,6 @@
 # Music
 
-Play audio from YouTube, Spotify, SoundCloud, and more directly in voice channels.
+Play audio from YouTube and Spotify directly in voice channels. Spotify track links are matched to a YouTube source automatically.
 
 ![Music in the ArkenBot dashboard](/img/screenshots/music.png)
 
@@ -17,14 +17,16 @@ All music controls are slash commands used in Discord:
 
 | Command | Description |
 |---|---|
-| `/play <url or search>` | Play a song or add it to the queue. Accepts YouTube URLs, Spotify links, SoundCloud links, or search terms |
+| `/play <url or search>` | Play a song or add it to the queue. Accepts YouTube URLs, Spotify track links, or search terms |
 | `/skip` | Skip the current track |
-| `/queue` | View the current queue |
+| `/queue` | View the current queue and now-playing track |
 | `/pause` | Pause playback |
 | `/resume` | Resume playback |
 | `/volume <1-100>` | Adjust the playback volume |
+| `/loop <off\|track\|queue>` | Repeat the current track or the whole queue |
 | `/stop` | Stop playback and clear the queue |
-| `/nowplaying` | Show the currently playing track with progress bar |
+
+For the full option reference, see [Music Commands](../commands/music.md).
 
 ## Notes
 
