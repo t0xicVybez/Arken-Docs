@@ -154,3 +154,16 @@ Remove a self-assignable role from yourself.
 | `name` | Yes | The short name of the role to remove (autocomplete shows your current roles) |
 
 Autocomplete only shows self-assignable roles you currently have.
+
+## /permcheck
+
+Report which permissions ArkenBot is missing in the current server. Restricted to members with **Manage Server**; the reply is only shown to you.
+
+It checks:
+
+- **Server-wide permissions** the bot's features rely on (View Audit Log, Manage Roles, Ban/Kick/Timeout Members, Manage Messages, and more), with a one-click re-invite link that grants the full set — no need to kick the bot.
+- **Per-channel access** — any channels where the bot can't View, Send, Embed, or Add Reactions.
+
+If ArkenBot has **Administrator**, it short-circuits to a simple "all good."
+
+> The same information is available in the dashboard under **Server → Permission Health**, including a per-channel breakdown and the re-invite button.

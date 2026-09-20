@@ -55,6 +55,52 @@ Remove a saved server. Requires **Manage Server** permission.
 |---|---|---|
 | `name` | Yes | Name of the saved server to remove |
 
+## Live Monitoring
+
+Keep an always-on view of your servers in Discord. All monitoring commands require the **Manage Server** permission, and a single background poll (every ~3 minutes) drives all of them at once.
+
+### /server board
+
+Post a **live status board** — an embed that auto-updates in place with each saved server's status, player count, map, and ping.
+
+| Option | Required | Description |
+|---|---|---|
+| `channel` | Yes | Text channel for the board |
+
+### /server alerts
+
+Get a message whenever a saved server **goes down or comes back online**.
+
+| Option | Required | Description |
+|---|---|---|
+| `channel` | Yes | Text channel for up/down alerts |
+
+### /server statchannel
+
+Show the **total online player count** across all saved servers in a voice channel's name (e.g. `🎮 24 playing`), updated automatically (rate-limit aware).
+
+| Option | Required | Description |
+|---|---|---|
+| `channel` | Yes | Voice channel to rename |
+
+### /server graph
+
+Show a **player-count history graph** (a sparkline) for a saved server, with current, peak, and average. History is recorded automatically once a server is saved.
+
+| Option | Required | Description |
+|---|---|---|
+| `name` | Yes | Saved server name (autocomplete supported) |
+
+### /server monitoroff
+
+Turn off the status board, alerts, and stat channel.
+
+> The board first appears on the next poll cycle (within a few minutes), then updates itself in place. Player counts feed both the board and `/server graph`, so history builds up in the background.
+
+## Dashboard
+
+The **Game Servers** page in the dashboard (under *Content & Tools*) shows your saved servers with a live player-count sparkline, plus where the board, alerts, and stat channel are posted.
+
 ## Supported Games
 
 The addon supports 40+ game types including Minecraft, Rust, Valheim, ARK, CS2, Arma 3, FiveM, Palworld, 7 Days to Die, and many more. Start typing in the `game` option to search with autocomplete.
