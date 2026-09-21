@@ -22,6 +22,17 @@ Open **Dashboard → Server Settings → Cross-Server Ban Network**:
 | **Flag threshold** | How many *other* servers must have banned a user before they're flagged (default 3, min 1). Higher = stricter. |
 | **Alert channel** | Where flags are posted. Falls back to your mod-log, then your log channel. |
 
+## Commands
+
+Staff with the **Ban Members** permission get two tools:
+
+| Command | What it does |
+|---|---|
+| `/bannetwork scan` | Scans your **current members** against the network and lists anyone who's flagged, with a one-click **Ban all flagged** button. Use it right after enabling the network to catch offenders who are already in your server. |
+| `/bannetwork check <user>` | Shows how many network servers have banned a specific user, and the reported reasons. |
+
+> `scan` only checks members who are already in your server (the join alert handles people who join later). The **Ban all flagged** button bans every currently-flagged member at once — it requires Ban Members and skips anyone the bot can't ban.
+
 ## The staff alert
 
 With **Alert staff** selected, a flagged join posts an embed showing the user, how many servers banned them, and the reported reasons, with two buttons:
