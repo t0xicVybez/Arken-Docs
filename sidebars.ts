@@ -23,6 +23,7 @@ const sidebars: SidebarsConfig = {
         'setup/automod',
         'setup/alt-protection',
         'setup/appeals',
+        'setup/ban-network',
         'setup/leveling',
         'setup/economy',
         'setup/modmail',
