@@ -58,6 +58,7 @@ These are embedded into the Next.js build **at compile time**, not at runtime. I
 | `YTDLP_PROXY` | Routes YouTube music playback through a proxy (e.g. `socks5://127.0.0.1:1080`) so it works from a datacenter IP — see [YouTube Music Proxy](youtube-music-proxy) |
 | `YOUTUBE_COOKIES_FILE` | Path to a Netscape-format cookies file for yt-dlp (optional; only needed for age-restricted videos) |
 | `GROQ_API_KEY` | Enables all AI features — the AI Assistant (`/ask`, `/summarize`), ticket AI triage, AI Moderation, and Code Review. Without it, these features report AI as unavailable. |
+| `LIBRETRANSLATE_URL` | Points the [Translator](../addons/translate) addon at a [LibreTranslate](https://libretranslate.com) instance (e.g. `http://localhost:5000`). Optional extras: `LIBRETRANSLATE_API_KEY`, `LIBRETRANSLATE_CONCURRENCY`, `LIBRETRANSLATE_TIMEOUT_MS`, `TRANSLATION_CACHE_SIZE`. Without a reachable instance, the Translator addon reports translation as unavailable. |
 
 ## Install Dependencies
 

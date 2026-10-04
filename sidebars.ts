@@ -89,6 +89,7 @@ const sidebars: SidebarsConfig = {
         'addons/confessions',
         'addons/faq',
         'addons/github-monitor',
+        'addons/translate',
         'addons/sdk',
       ],
     },

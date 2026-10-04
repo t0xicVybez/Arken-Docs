@@ -25,6 +25,7 @@ Go to **Addon Manager** in the sidebar to see all available addons and their sta
 | [Anonymous Confessions](confessions.md) | Anonymous confessions board with staff approval, reply threads, cooldowns, and author lookup |
 | [FAQ / Knowledge Base](faq.md) | Searchable Q&A knowledge base with `/faq` autocomplete — no AI required |
 | [GitHub Monitor](github-monitor.md) | Post new commits, pull requests, and issues from public GitHub repos |
+| [Translator](translate.md) | Translate messages via `/translate`, a right-click action, or country-flag reactions |
 
 ## How Addons Work
 
