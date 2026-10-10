@@ -33,14 +33,16 @@ After creation, deploy the panel to a channel with `/ticket-setup panel deploy`.
 A single panel can offer **multiple buttons** for different ticket types — General Support, Bug Report, Player Report, Rank Code Claim, and so on — so you don't need a separate panel for each. Configure these in **Tickets → Panels →** edit a panel.
 
 - **Buttons tab** — add up to 25 buttons. Each button has its own label, emoji, colour, optional category tag (applied to tickets it opens), and optional staff roles.
-- **Fields tab** — add up to 5 form questions. When a member opens a ticket, they're shown a modal with these questions; the answers are saved to the ticket and shown in the ticket embed and transcript.
+- **Fields tab** — set up to 5 form questions. When a member opens a ticket, they're shown a modal with these questions; the answers are saved to the ticket and shown in the ticket embed and transcript.
 
 #### Different questions per button
 
-Each button can ask its **own** questions instead of the shared ones. In the **Buttons tab**, expand a button's **Custom questions** section and add questions for that button only (up to 5).
+Each button can ask its **own** questions instead of the shared ones. In the **Fields tab**, use the **Questions for** selector at the top:
 
-- A button **with** custom questions shows those when clicked — its modal is even titled with the button's label.
-- A button **without** custom questions falls back to the panel's **Fields** tab.
+- **All buttons (default)** — the shared questions, used by any button that doesn't have its own.
+- **A specific button** — questions shown only for that button (up to 5). Leave it empty to use the default.
+
+A button with its own questions shows them when clicked (its modal is titled with the button's label); a button without falls back to the default.
 
 This lets one panel ask, for example, "Steps to reproduce" on a **Bug Report** button and "Who are you reporting?" on a **Player Report** button, while a plain **General Support** button uses the shared default questions. Set common defaults in the Fields tab and only override the buttons that need something different.
 
