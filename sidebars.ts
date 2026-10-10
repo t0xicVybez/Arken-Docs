@@ -39,6 +39,7 @@ const sidebars: SidebarsConfig = {
         'setup/birthdays',
         'setup/suggestions',
         'setup/giveaways',
+        'setup/server-promotion',
         'setup/music',
         'setup/counting',
         'setup/scheduled-messages',
