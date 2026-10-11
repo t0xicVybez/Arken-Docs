@@ -104,7 +104,9 @@ The result now carries action buttons: **Set Priority** (applies the AI's urgenc
 
 Enable **AI Assist → Auto-triage on open** in settings to run this automatically whenever a ticket is created. The summary and suggested reply are saved as a staff note (viewable with `/ticket notes`) and surfaced in the dashboard, and the staff-notification ping includes the summary. Optionally let it **set the priority** from the AI's urgency and **add a tag**.
 
-When a staff member **claims** the ticket, the brief (summary, suggested reply, and the action buttons) is sent to them privately — so the person handling it sees the context immediately without running `/ticket notes`.
+When a staff member **claims** the ticket, the brief (summary, suggested reply, and the action buttons) is sent to them privately — so the person handling it sees the context immediately without running `/ticket notes`. If the conversation has moved on since the brief was first made, it's **regenerated** so the claimer always sees current context.
+
+On **`/ticket transfer`**, the brief is **regenerated from the whole conversation so far** and **DM'd to the new owner** — a proper handoff that reflects everything discussed, not just the opening message. If the new owner has DMs closed, they get a quiet in-channel nudge to run `/triage` instead (the private AI content is never posted publicly).
 
 ### Opener history
 
