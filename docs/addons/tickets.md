@@ -28,6 +28,8 @@ Use `/ticket-setup panel create` with these options:
 
 After creation, deploy the panel to a channel with `/ticket-setup panel deploy`.
 
+**Channel naming** uses the panel's naming pattern with these placeholders: `{number}` (zero-padded), `{username}`, and `{category}` (the clicked button's category tag). For example `{category}-{number}` names a ticket opened from a button tagged `con` as `con-0009`.
+
 ### Buttons & form questions
 
 A single panel can offer **multiple buttons** for different ticket types — General Support, Bug Report, Player Report, Rank Code Claim, and so on — so you don't need a separate panel for each. Configure these in **Tickets → Panels →** edit a panel.
