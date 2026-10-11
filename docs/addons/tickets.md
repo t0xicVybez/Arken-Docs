@@ -35,6 +35,12 @@ A single panel can offer **multiple buttons** for different ticket types — Gen
 - **Buttons tab** — add up to 25 buttons. Each button has its own label, emoji, colour, optional category tag (applied to tickets it opens), and optional staff roles.
 - **Fields tab** — set up to 5 form questions. When a member opens a ticket, they're shown a modal with these questions; the answers are saved to the ticket and shown in the ticket embed and transcript.
 
+#### Display as buttons or a dropdown
+
+By default a panel shows one **button** per ticket type. For panels with several ticket types you can switch to a **dropdown menu** instead, which collapses every option into a single tidy select menu. In the **Buttons tab**, use **Display options as** → **Buttons** or **Dropdown menu**.
+
+The dropdown option appears once a panel has **2 or more** buttons (a single-option panel always shows one button). Picking a type from the dropdown opens a ticket exactly like clicking its button — category tags and per-button questions all still apply. Changing the style and saving updates the already-posted panel in Discord automatically, so there's no need to re-deploy it.
+
 #### Different questions per button
 
 Each button can ask its **own** questions instead of the shared ones. In the **Fields tab**, use the **Questions for** selector at the top:
