@@ -63,7 +63,7 @@ All ticket management is done with `/ticket` subcommands inside an open ticket c
 | `close [reason]` | Close the ticket |
 | `claim` | Claim the ticket as your own |
 | `unclaim` | Release your claim |
-| `reopen` | Reopen a closed ticket |
+| `reopen` | Reopen a closed ticket (if the panel has a reopen window set, this stops working once it's expired — see [Lifecycle automation](#lifecycle-automation)) |
 | `transfer <staff>` | Transfer ownership to another staff member |
 | `add <user>` | Add a user to the ticket |
 | `remove <user>` | Remove a user from the ticket |
@@ -87,7 +87,7 @@ These two run **anywhere**, not just inside a ticket:
 
 ### Canned-response placeholders
 
-Canned responses sent with `/ticket respond` substitute these placeholders at send time: `{user}` (mentions the opener), `{username}`, `{staff}` (mentions you), `{staffname}`, and `{ticket}` (e.g. `#42`).
+Canned responses sent with `/ticket respond` substitute these placeholders at send time: `{user}` (mentions the opener), `{username}`, `{staff}` (mentions you), `{staffname}`, and `{ticket}` (e.g. `#42`). Each use is tracked — the **Canned Responses** dashboard page shows how many times each one's been sent and when it was last used, so you can spot which ones are actually useful and prune the rest.
 
 ## AI Triage & Assist
 
@@ -106,7 +106,11 @@ Enable **AI Assist → Auto-triage on open** in settings to run this automatical
 
 When a staff member **claims** the ticket, the brief (summary, suggested reply, and the action buttons) is sent to them privately — so the person handling it sees the context immediately without running `/ticket notes`. If the conversation has moved on since the brief was first made, it's **regenerated** so the claimer always sees current context.
 
-On **`/ticket transfer`**, the brief is **regenerated from the whole conversation so far** and **DM'd to the new owner** — a proper handoff that reflects everything discussed, not just the opening message. **Round-robin auto-assign** DMs the assigned staffer the brief the same way. If the recipient has DMs closed, they get a quiet in-channel nudge to run `/triage` instead (the private AI content is never posted publicly).
+On **`/ticket transfer`**, the brief is **regenerated from the whole conversation so far** and **DM'd to the new owner** — a proper handoff that reflects everything discussed, not just the opening message. **Auto-assign** DMs the assigned staffer the brief the same way. If the recipient has DMs closed, they get a quiet in-channel nudge to run `/triage` instead (the private AI content is never posted publicly).
+
+### Multi-language replies
+
+When auto-triage generates a suggested reply, it first detects the language the customer wrote their ticket in and writes the reply **in that language** — so a staff member can post it straight through without translating by hand. The summary and suggested tag stay in English either way, since those are for staff, not the customer.
 
 ### Opener history
 
@@ -120,12 +124,12 @@ With **Show opener history** on, staff see how many previous tickets the opener 
 
 The **Tickets** section in the sidebar provides:
 
-- **Open tickets** — Active tickets with status, priority, and assigned staff
-- **Ticket detail** — View full conversation thread and staff notes
-- **Canned Responses** — Create pre-written replies staff can insert with one click
-- **Panels** — Manage and redeploy panels
-- **Stats** — Ticket volume, resolution time, satisfaction ratings, a **per-agent leaderboard**, and a **CSV export** of every ticket
-- **Settings** — Global ticket config (below)
+- **Open tickets** — Active tickets with status, priority, and assigned staff. Updates live as the ticket changes in Discord (new messages, claims, closes) — no need to refresh the page. Search matches message content as well as ticket metadata, so you can find a ticket by something that was said in it. Select multiple tickets with the checkbox column for **bulk actions** — close, tag, or set priority on all of them at once.
+- **Ticket detail** — View the full conversation thread and staff notes, also updated live. Transfer uses a **real staff picker** — a dropdown of actual members with the panel's staff roles, instead of typing in a user ID — and falls back to manual entry if the member list can't be loaded. **Merge** another ticket into this one by its ticket number: messages, tags, and notes combine, and the source ticket closes automatically. Download the transcript as **HTML, JSON, or plain text**.
+- **Canned Responses** — Create pre-written replies staff can insert with one click; see usage counts per response above.
+- **Panels** — Manage and redeploy panels.
+- **Stats** — Ticket volume, resolution time, satisfaction ratings, a **per-agent leaderboard** (including an **SLA-adherence** column — see [SLA & escalation](#sla--escalation)), and a **CSV export** of every ticket.
+- **Settings** — Global ticket config (below).
 
 ## Settings
 
@@ -135,9 +139,9 @@ Configure in **Tickets → Settings**:
 |---|---|
 | **Transcript Channel** | Channel to archive transcripts |
 | **Staff Notify Channel / Role** | Channel + role pinged on new tickets |
-| **Rating Window** | Minutes after close to request a rating |
-| **Auto Assign** | Round-robin tickets to available staff |
-| **AI Assist** | Auto-triage on open, set-priority-from-AI, auto-tag, opener history |
+| **Rating Window** | Minutes after close to request a rating. The prompt first asks a quick **Yes/No: was your issue resolved?**, then opens the star-rating + feedback modal — so Stats and the per-agent leaderboard can track resolution rate separately from satisfaction. |
+| **Auto Assign** | Assigns to whichever available staff member (across every staff role on the panel) currently has the **fewest open tickets**; round-robin only breaks ties, it's not the primary rule |
+| **AI Assist** | Auto-triage on open, set-priority-from-AI, auto-tag, opener history, multi-language replies |
 | **Lifecycle** | Hours before auto-close to nudge the opener with a *Keep Open* button |
 | **Business Hours** | Timezone + open/close times + active days; pause SLA and post an away reply outside hours |
 | **Quality & Feedback** | Alert a role/channel when a rating is at or below a threshold |
@@ -145,7 +149,7 @@ Configure in **Tickets → Settings**:
 | **Weekly Digest** | Post a weekly ticket summary to a channel |
 | **SLA Levels** | Warning thresholds (hours) with optional ping role and **priority escalation** |
 | **Blacklisted Users** | Users blocked from opening tickets |
-| **Webhook URL** | External webhook called on ticket events |
+| **Webhook URL** | External webhook called on ticket events. Once set, a signing secret is generated automatically (shown read-only in Settings) — each request carries an `X-ArkenBot-Signature` HMAC-SHA256 header so your receiver can verify it actually came from ArkenBot, plus one automatic retry on failure. |
 
 ## SLA & escalation
 
@@ -156,6 +160,7 @@ Set multiple SLA levels by hours. When a ticket with no first response crosses a
 - **Pre-close nudge** — a few hours before a ticket auto-closes for inactivity, the opener is pinged with a **Keep Open** button that resets the timer. Set the lead time in **Settings → Lifecycle**.
 - **Request to close** — `/ticket requestclose` asks the opener to confirm (Confirm Close / Keep Open) instead of closing unilaterally.
 - **Snooze** — `/ticket snooze 2h` re-pings you about a ticket later.
+- **Reopen window** — limit how long after close a ticket can be reopened (via `/ticket reopen` or the Reopen button). Set per panel in **Tickets → Panels → edit a panel**, next to Auto-close. Leave it unset for no limit.
 
 ## Access controls
 
