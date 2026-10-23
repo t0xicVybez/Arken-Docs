@@ -23,8 +23,8 @@ Use `/ticket-setup panel create` with these options:
 | `button_color` | No | Button color (blurple, grey, green, red) |
 | `category` | No | Category where ticket channels are created |
 | `log_channel` | No | Channel to post transcripts |
-| `staff_role` | No | Role that can manage tickets |
-| `max_tickets` | No | Max open tickets per user |
+| `staff_role` | Yes | Role that can manage tickets. A panel can't be created without one, so every panel has a staff team that can act on its tickets. |
+| `max_tickets` | No | Max open tickets per user **on this panel**. Tickets on other panels don't count toward it. |
 
 After creation, deploy the panel to a channel with `/ticket-setup panel deploy`.
 
@@ -56,7 +56,7 @@ This lets one panel ask, for example, "Steps to reproduce" on a **Bug Report** b
 
 ## Ticket Commands
 
-All ticket management is done with `/ticket` subcommands inside an open ticket channel:
+All ticket management is done with `/ticket` subcommands inside an open ticket channel. Staff actions (claim, transfer, priority, tags, notes, and so on) are limited to the panel's staff roles, and to members with the **Manage Channels** permission. The ticket's opener can close their own ticket. Members added with `/ticket add` can read and reply, but can't close it.
 
 | Subcommand | Description |
 |---|---|
