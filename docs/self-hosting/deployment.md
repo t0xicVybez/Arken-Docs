@@ -118,27 +118,42 @@ Certbot configures HTTPS automatically and sets up auto-renewal. After running i
 
 ---
 
-## Lavalink — Music Support {#lavalink}
+## Music Support {#music}
 
-Music commands require a running [Lavalink](https://lavalink.dev) server. If you do not need music, skip this section.
+Music playback is handled directly by the bot via [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) piped through `ffmpeg` — **there is no separate server to run** (no Lavalink, nothing to connect to). If you don't need music, skip this section.
 
-1. Download the latest `Lavalink.jar` from the [Lavalink releases](https://github.com/lavalink-devs/Lavalink/releases).
-2. Create an `application.yml` config file (the Lavalink docs provide a template).
-3. Run Lavalink: `java -jar Lavalink.jar`
-4. Set these variables in your `.env`:
+Install both binaries on the same host the `bot` process runs on:
+
+```bash
+sudo apt-get install -y ffmpeg
+
+# yt-dlp changes frequently to keep up with YouTube — install the standalone
+# binary rather than an apt package, which is usually far out of date:
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp
+
+# Verify both are on PATH
+yt-dlp --version
+ffmpeg -version
+```
+
+:::info Keep yt-dlp updated
+YouTube changes frequently break older `yt-dlp` releases. If music suddenly stops working, re-run the download command above to grab the latest release before looking for other causes.
+:::
+
+No `.env` variables are required for basic music playback. Two optional ones help if your server's outbound IP gets throttled or blocked by YouTube (common on datacenter/VPS IPs):
 
 ```
-LAVALINK_HOST=localhost
-LAVALINK_PORT=2333
-LAVALINK_PASSWORD=youshallnotpass   # must match your application.yml
-LAVALINK_SECURE=false               # set to true if using TLS
-```
+# SOCKS proxy yt-dlp routes through (e.g. a residential SOCKS5 tunnel)
+YTDLP_PROXY=socks5://127.0.0.1:1080
 
-**YouTube cookies (optional):** Server IPs are sometimes blocked by YouTube. If music fails, export cookies from your browser using the "Get cookies.txt LOCALLY" Chrome extension while signed into YouTube, save the file on the server, and set:
-
-```
+# Netscape-format cookies file, bypasses bot-detection on server IPs — export
+# from your browser using the "Get cookies.txt LOCALLY" Chrome extension
+# while signed into YouTube
 YOUTUBE_COOKIES_FILE=/path/to/youtube-cookies.txt
 ```
+
+See [YouTube Music Proxy](youtube-music-proxy) for a full walkthrough of setting up `YTDLP_PROXY`.
 
 ---
 

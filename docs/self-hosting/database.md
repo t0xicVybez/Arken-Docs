@@ -38,14 +38,9 @@ pnpm db:push
 
 This creates all tables. Re-run it after pulling updates that include schema changes.
 
-### Production Migrations (Alternative)
-
-For a more controlled production workflow, use the migration runner instead of `db:push`:
-
-```bash
-pnpm db:migrate     # applies pending migrations
-pnpm db:generate    # regenerates the Prisma client
-```
+:::info Use db:push, not db:migrate
+`pnpm db:migrate` (Prisma's migration-file runner) only exists for a handful of historical migrations from early in the project — schema changes since then are applied directly via `db:push` and were never captured as migration files. Running `db:migrate` alone will leave your database missing everything added after that point. Always use `pnpm db:push` after pulling updates, even in production.
+:::
 
 ## Verify the Connection
 

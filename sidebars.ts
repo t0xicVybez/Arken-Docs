@@ -104,6 +104,7 @@ const sidebars: SidebarsConfig = {
         'self-hosting/installation',
         'self-hosting/database',
         'self-hosting/deployment',
+        'self-hosting/dashboard',
         'self-hosting/troubleshooting',
         'self-hosting/youtube-music-proxy',
       ],

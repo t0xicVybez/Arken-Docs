@@ -52,7 +52,6 @@ These are embedded into the Next.js build **at compile time**, not at runtime. I
 | Variable | Description |
 |---|---|
 | `DISCORD_GUILD_ID` | Dev server ID — makes slash commands register instantly to one guild during development |
-| `LAVALINK_HOST / PORT / PASSWORD` | Required for music playback (see [Deployment](deployment#lavalink)) |
 | `TWITCH_CLIENT_ID / SECRET` | Required for Twitch stream alerts |
 | `YOUTUBE_API_KEY` | Required for YouTube stream alerts |
 | `YTDLP_PROXY` | Routes YouTube music playback through a proxy (e.g. `socks5://127.0.0.1:1080`) so it works from a datacenter IP — see [YouTube Music Proxy](youtube-music-proxy) |

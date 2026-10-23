@@ -2,7 +2,7 @@
 id: troubleshooting
 title: Troubleshooting
 sidebar_label: Troubleshooting
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Troubleshooting
@@ -59,9 +59,10 @@ sudo chown -R <build-user>:<group> packages/web/.next
 
 ## Music commands not working
 
-- Confirm Lavalink is running on the configured host and port.
-- Check the bot logs for Lavalink connection errors: `pm2 logs bot`
-- If you see YouTube 403 errors, set up `YOUTUBE_COOKIES_FILE` (see [Deployment → Lavalink](deployment#lavalink)).
+- Confirm both binaries are installed and on `PATH` for the user PM2 runs as: `yt-dlp --version` and `ffmpeg -version`. There's no separate server to check — playback runs directly through these two.
+- Check the bot logs for the actual error: `pm2 logs bot | grep -i yt-dlp`
+- If you see YouTube 403s or "Sign in to confirm you're not a bot" errors, your server's IP is likely blocked — set up `YTDLP_PROXY` or `YOUTUBE_COOKIES_FILE` (see [Deployment → Music Support](deployment#music)).
+- If it used to work and suddenly stopped, re-download the latest `yt-dlp` release — YouTube changes break older versions frequently.
 
 ## Bot joins but can't assign roles
 

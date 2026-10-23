@@ -36,12 +36,12 @@ Anyone with your bot token has full control of your bot. Never commit it to git 
 
 1. In the left sidebar click **OAuth2** → **General**.
 2. Copy the **Client Secret** — this is your `DISCORD_CLIENT_SECRET`.
-3. Under **Redirects**, click **Add Redirect** and enter your dashboard callback URL:
-   - Local development: `http://localhost:3000/auth/callback`
-   - Production: `https://yourdomain.com/auth/callback`
+3. Under **Redirects**, click **Add Redirect** and enter your callback URL:
+   - Local development: `http://localhost:4000/auth/callback`
+   - Production: `https://api.yourdomain.com/auth/callback`
 
-:::warning Exact match required
-The redirect URI in your `.env` must match the one registered here **exactly**, including the protocol and path. A mismatch causes login to fail.
+:::warning Points at the API, not the dashboard
+The `/auth/callback` route is handled by the **API** service (`packages/api`, port 4000 by default), not the web dashboard — use the API's domain/port here, not the dashboard's. This must match `DISCORD_REDIRECT_URI` in your `.env` **exactly**, including the protocol and path, or login will fail.
 :::
 
 ## 4. Invite the Bot to Your Server

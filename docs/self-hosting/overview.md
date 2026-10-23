@@ -13,9 +13,13 @@ This section covers everything you need to host ArkenBot on your own server. Ark
 |---|---|---|
 | **Bot** | Discord.js v14, TypeScript | The Discord bot process |
 | **API** | Fastify 5, TypeScript | REST API + WebSocket gateway |
-| **Web** | Next.js 15, React 19 | Web dashboard |
+| **Web** | Next.js 16, React 19 | Web dashboard |
 
 All three services read from a single `.env` file at the repository root and are managed by **PM2**.
+
+:::tip Don't want to run a Node dashboard process?
+The web dashboard above is also available as a **separate, static single-page app** — same features and look, but it compiles to plain HTML/CSS/JS with no Node runtime needed to serve it. See [Self-Hosting the Dashboard (Static SPA)](dashboard) if you'd rather skip running `web` entirely (or want to run the dashboard on a different, cheaper host than the bot/API).
+:::
 
 ## Prerequisites Overview
 
